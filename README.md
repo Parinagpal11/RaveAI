@@ -87,7 +87,4 @@ Backend `.env`:
 - `OPENALEX_EMAIL=` (optional but recommended)
 - `SEMANTIC_SCHOLAR_API_KEY=` (optional)
 
-## Notes
 
-- Existing papers are deduplicated by `external_id`.
-- If external APIs are unavailable, ingestion falls back to mock papers.
