@@ -1,0 +1,383 @@
+:root {
+  --bg: #f1f1f3;
+  --sidebar: #ffffff;
+  --surface: #ffffff;
+  --border: #dbe2ea;
+  --primary: #0ea5e9;
+  --primary-hover: #0284c7;
+  --secondary: #f97316;
+  --danger: #ef4444;
+  --text: #1e293b;
+  --text-2: #64748b;
+  --tag-bg: #e0f2fe;
+  --tag-text: #0369a1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(
+      rgba(50, 233, 135, 0.85),
+      rgba(84, 149, 210, 0.85)
+    ),
+    url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.appShell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: var(--sidebar);
+  padding: 24px 14px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 8px 22px;
+}
+
+.navSection { margin-bottom: 16px; }
+
+.navSectionTitle {
+  color: var(--text-2);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 10px 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  color: var(--text-2);
+  transition: all 0.2s ease;
+}
+
+.navItem:hover,
+.navItem.active {
+  background: #eef6ff;
+  border: 1px solid #b7dbf5;
+  color: var(--text);
+}
+
+.mainArea {
+  padding: 24px 28px 90px;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.topHeader {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+}
+
+.topHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #e0f2fe;
+}
+
+.topTitle { font-size: 14px; font-weight: 700; }
+.topSubtitle { font-size: 12px; color: var(--text-2); }
+
+.globalSearch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: #ffffff;
+}
+
+.globalSearch input {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  margin: 0;
+}
+
+.topActions { display: flex; gap: 8px; }
+
+.container { width: 100%; }
+
+.hero {
+  max-width: 900px;
+  margin: 68px auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  color: var(--text-2);
+  margin: 0 0 20px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 1120px) {
+  .grid2 {
+    grid-template-columns: 1fr 420px;
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin: 8px 0;
+  font-family: inherit;
+  background: #ffffff;
+  color: var(--text);
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.primaryBtn,
+button {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.primaryBtn:hover,
+button:hover {
+  background: var(--primary-hover);
+}
+
+.secondaryBtn,
+.ghostBtn,
+.tabBtn {
+  background: #ffffff;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.dangerBtn {
+  background: var(--danger);
+  color: #fff;
+}
+
+.iconBtn {
+  padding: 9px;
+  border-radius: 10px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.paperCard {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.paperCard:hover {
+  transform: scale(1.01);
+  border-color: #8dd2f4;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.tabBtn.active {
+  background: var(--secondary);
+  color: white;
+  border-color: transparent;
+}
+
+.fabWrap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+.fab {
+  border-radius: 999px;
+  padding: 12px 18px;
+}
+
+.fabMenu {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.fabLink {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--text);
+}
+
+.fabLink:hover {
+  background: #eef6ff;
+}
+
+.assistantWrap {
+  position: fixed;
+  bottom: 22px;
+  left: 282px;
+  z-index: 30;
+}
+
+.assistantFab {
+  border-radius: 999px;
+}
+
+.assistantPanel {
+  width: 360px;
+  margin-bottom: 10px;
+}
+
+.assistantAnswer {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #f8fbff;
+  color: var(--text-2);
+  max-height: 200px;
+  overflow: auto;
+  font-size: 13px;
+}
+
+.emptyState {
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  color: var(--text-2);
+  text-align: center;
+  background: #ffffff;
+}
+
+@media (max-width: 960px) {
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mainArea {
+    padding: 16px;
+  }
+
+  .topHeader {
+    grid-template-columns: 1fr;
+  }
+
+  .assistantWrap {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .assistantPanel {
+    width: auto;
+  }
+}
