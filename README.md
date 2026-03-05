@@ -1,4 +1,4 @@
-# Rave
+# RaveAI
 
 Rave is an AI co-researcher that understands papers, connects ideas, detects research gaps, and helps generate literature reviews.
 
@@ -12,6 +12,7 @@ This repository includes an MVP with:
 
 - `backend/` FastAPI service
 - `frontend/` Next.js client
+
 
 ## Backend setup
 
