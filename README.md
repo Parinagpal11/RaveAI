@@ -8,11 +8,10 @@ This repository includes an MVP with:
 - SQLModel persistence (SQLite default, Postgres-ready)
 - Next.js frontend for topic search, paper exploration, Q&A, and review generation
 
-## Structure
-
-- `backend/` FastAPI service
-- `frontend/` Next.js client
-
+## System Architecture
+<p align="center">
+  <img src="./System.png" alt="RaveAI System Architecture" width="900" />
+</p>
 
 ## Backend setup
 
